@@ -138,7 +138,7 @@ class LocalCalibrateThresholdComputation:
                 if len(idces) > 0 and idces[0] > 0:
                     thresh[i][j] = thrs[idces[0]-1]
                 else:
-                    thresh[i][j] = np.NaN
+                    thresh[i][j] = np.nan
 
         return thresh
 
@@ -151,7 +151,7 @@ class LocalCalibrateThresholdComputation:
             threshCurrent = threshT[j]
             invalids = np.count_nonzero(np.isnan(threshCurrent))
             if invalids > discountonesided*B:
-                DiscountedThreshold[j] = np.NaN
+                DiscountedThreshold[j] = np.nan
             else:
                 valids = threshCurrent[~np.isnan(threshCurrent)]
                 valids = np.sort(valids)

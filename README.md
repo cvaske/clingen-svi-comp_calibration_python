@@ -1,13 +1,17 @@
 This is a python version of [clingen-svi-comp_calibration](https://github.com/vpejaver/clingen-svi-comp_calibration)
 
 We have tested this tool with python 3.6 and python 3.8.
-The tool relies on numpy and matplotlib and should work with recently fair version of these libraries.
+The tool relies on numpy, scipy, and matplotlib and should work with recently fair version of these libraries.
+
+This code is a Python package, and installs a command line script
+named `svi-calibrate`. You can pip install this directory to make the
+command available.
 
 To run the code:
+```bash
+svi-calibrate --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
 ```
-python main.py --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
-```
-The results are stored in "out" sub directory.
+This command stores results in an "out" sub directory.
 
 
 
@@ -67,7 +71,7 @@ An example of using Local Calibration Method to compute BootStrapped Discounted 
 You can run the example as modules:
 
 ```
-python -m examples.example1 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
-python -m examples.example2 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
-python -m examples.example3 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
+svi-calibrate-example1 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
+svi-calibrate-example2 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
+svi-calibrate-example3 --configfile "$PATH_TO_CONFIG_FILE" --tool="$TOOL_NAME" --labelled_data_file "$PATH_TO_LABELLED_DATA_FILE" --unlabelled_data_file "$PATH_TO_UNBALELLED_DATA_FILE" --outdir="out"
 ```
