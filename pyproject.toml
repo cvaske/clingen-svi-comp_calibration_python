@@ -1,0 +1,20 @@
+[project]
+name = "clingen-svi-calibrate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Himanshu Sharma", email = "sharmh15@li03c03.chimera.hpc.mssm.edu" },
+    { name = "Charles Vaske", email = "charlie@seavaske.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.24.4",
+]
+
+[project.scripts]
+svi-calibrate = "clingen_svi_calibrate:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
