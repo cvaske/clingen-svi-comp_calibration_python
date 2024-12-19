@@ -2,16 +2,14 @@ import csv
 import argparse
 import os
 import numpy as np
-import math
 import time
-import bisect
-from Tavtigian.tavtigian import get_tavtigian_c, get_tavtigian_thresholds
-from configmodule import ConfigModule
-from LocalCalibration.gaussiansmoothing import *
 from multiprocessing.pool import Pool
-from LocalCalibration.LocalCalibration import LocalCalibration
-from Tavtigian.Tavtigian import LocalCalibrateThresholdComputation
-import time
+
+from ..configmodule import ConfigModule
+from ..LocalCalibration.gaussiansmoothing import *
+from ..LocalCalibration.LocalCalibration import LocalCalibration
+from ..Tavtigian.Tavtigian import LocalCalibrateThresholdComputation
+from ..Tavtigian.Tavtigian import get_tavtigian_c, get_tavtigian_thresholds
 
 
 def load_labelled_data(filepath):

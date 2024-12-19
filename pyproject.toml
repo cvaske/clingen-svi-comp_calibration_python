@@ -10,10 +10,14 @@ authors = [
 requires-python = ">=3.8"
 dependencies = [
     "numpy>=1.24.4",
+    "scipy>=1.10.1",
 ]
 
 [project.scripts]
 svi-calibrate = "clingen_svi_calibrate:main"
+svi-calibrate-example1 = "clingen_svi_calibrate.examples.example1:main"
+svi-calibrate-example2 = "clingen_svi_calibrate.examples.example2:main"
+svi-calibrate-example3 = "clingen_svi_calibrate.examples.example3:main"
 
 [build-system]
 requires = ["hatchling"]

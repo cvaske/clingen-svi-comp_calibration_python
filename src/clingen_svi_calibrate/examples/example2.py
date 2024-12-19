@@ -5,12 +5,12 @@ import numpy as np
 import math
 import time
 import bisect
-from Tavtigian.tavtigian import get_tavtigian_c, get_tavtigian_thresholds
-from configmodule import ConfigModule
-from LocalCalibration.gaussiansmoothing import *
 from multiprocessing.pool import Pool
-from LocalCalibration.LocalCalibration import LocalCalibration
-import time
+
+from ..Tavtigian.Tavtigian import get_tavtigian_c, get_tavtigian_thresholds
+from ..configmodule import ConfigModule
+from ..LocalCalibration.gaussiansmoothing import *
+from ..LocalCalibration.LocalCalibration import LocalCalibration
 
 
 def load_labelled_data(filepath):
